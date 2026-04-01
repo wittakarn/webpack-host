@@ -4,6 +4,7 @@ import { federation } from '@module-federation/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: 'http://localhost:5001/',
   plugins: [
     react(),
     federation({
@@ -12,19 +13,17 @@ export default defineConfig({
       exposes: {
         './Button': './src/components/Button'
       },
-      manifest: true,
       shared: {
         react: {
-        singleton: true,
-        eager: true
-      },'react-dom': {
-        singleton: true,
-        eager: true
-      },
-    }
+          singleton: true,
+          eager: true
+        }, 'react-dom': {
+          singleton: true,
+          eager: true
+        },
+      }
     })
   ],
-  base: 'http://localhost:5001/',
   build: {
     modulePreload: false,
     target: 'esnext',
