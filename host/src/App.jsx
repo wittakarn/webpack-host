@@ -5,8 +5,13 @@ import webpackLogo from './assets/webpack.svg'
 import './App.css'
 import ErrorBoundary from './ErrorBoundary';
 import ButtonRemote from './ButtonRemote';
+import { emitter } from './utils/bus';
 
 function App() {
+  React.useEffect(() => {
+    emitter.on('button:clicked', ({ count }) => alert(`Button clicked ${count} times!`));
+    emitter.on('remote:loaded', ({ name }) => alert(`Remote loaded: ${name}`));
+  }, []);
 
   return (
     <div className="App">

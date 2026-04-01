@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { emitter } from './utils/bus';
 
 const ButtonLazy = React.lazy(() => {
     return import('viteRemote/Button')
         .then((m) => {
-            // React.lazy requires { default: Component }
+            emitter.emit('remote:loaded', { name: 'viteRemote/Button' });
             if (m?.default) return m;
             return { default: m };
         })
@@ -16,7 +17,7 @@ const ButtonLazy = React.lazy(() => {
 const ButtonRemote = () => {
     return (
         <React.Suspense fallback={<div>loading...</div>}>
-            <ButtonLazy />
+            <ButtonLazy emitter={emitter} />
         </React.Suspense>
     );
 };
