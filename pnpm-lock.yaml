@@ -75,6 +75,12 @@ importers:
 
   remote_1:
     dependencies:
+      '@webpack-host/store':
+        specifier: workspace:*
+        version: link:../packages/store
+      jotai:
+        specifier: ^3.0.1
+        version: 3.0.1(@types/react@18.3.28)(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
