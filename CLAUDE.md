@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A **Module Federation v2 demo** showing a Webpack 5 host consuming federated modules from a Vite 4 remote. pnpm monorepo with two workspaces: `host/` and `remote/`.
+A **Module Federation v2 demo** showing a Webpack 5 host consuming federated modules from a Vite 4 remote. pnpm monorepo with two workspaces: `host/` and `remote_1/`.
 
 - **Host** (port 3000): Webpack 5 + React 18, consumes remote Button component
 - **Remote** (port 5001): Vite 4 + React 18, exposes Button component via `@module-federation/vite`
@@ -37,7 +37,7 @@ No test or lint configurations exist in this project.
 
 ### Module Federation Flow
 
-1. Remote (`remote/vite.config.js`) exposes `./Button` component and generates `mf-manifest.json`
+1. Remote (`remote_1/vite.config.js`) exposes `./Button` component and generates `mf-manifest.json`
 2. Host (`host/webpack.config.js`) declares remote as `viteRemote@http://localhost:5001/mf-manifest.json`
 3. Host's `ButtonRemote.jsx` uses `@module-federation/enhanced/runtime` to dynamically load the remote Button via `React.lazy()` + `Suspense`
 4. React and React-DOM are shared as eager singletons across both apps

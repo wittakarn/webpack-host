@@ -4,7 +4,7 @@ This example demos consumption of federated modules from a vite bundle as a remo
 
 ## Running
 
-First, run `pnpm install`, then `pnpm run build` and `pnpm run serve`. This will build and serve both `host` and `remote` on ports 3000, 5001 respectively.
+First, run `pnpm install`, then `pnpm run build` and `pnpm run serve`. This will build and serve both `host` and `remote_1` on ports 3000, 5001 respectively.
 
 - HOST: [localhost:3000](http://localhost:3000/)
 - REMOTE: [localhost:5001](http://localhost:5001/)
