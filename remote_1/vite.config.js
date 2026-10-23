@@ -13,6 +13,7 @@ export default defineConfig({
         './Button': './src/components/Button'
       },
       manifest: true,
+      dts: false,
       shared: {
         react: {
         singleton: true,

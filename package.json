@@ -4,15 +4,16 @@
   "scripts": {
     "build": "pnpm --parallel --filter \"./**\" build",
     "serve": "pnpm --parallel --filter \"./**\" serve ",
-    "build:remotes": "pnpm --filter \"./remote_1\"  build",
-    "serve:remotes": "pnpm --filter \"./remote_1\"  serve",
+    "build:remotes": "pnpm --filter \"./remote_*\" build",
+    "serve:remotes": "pnpm --filter \"./remote_*\" serve",
     "serve:hosts": "pnpm --filter \"./host\"  serve",
     "dev:hosts": "pnpm --filter \"./host\" dev",
-    "stop": "kill-port --port 3000,5001"
+    "stop": "kill-port --port 3000,5001,5002"
   },
   "workspaces": [
     "host",
-    "remote_1"
+    "remote_1",
+    "remote_2"
   ],
   "devDependencies": {
     "kill-port": "^2.0.1"
