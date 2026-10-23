@@ -11,6 +11,8 @@
     "serve": "vite preview --port 5002 --strictPort"
   },
   "dependencies": {
+    "@webpack-host/store": "workspace:*",
+    "jotai": "^3.0.1",
     "react": "^18.2.0",
     "react-compiler-runtime": "^1.0.0",
     "react-dom": "^18.2.0"
@@ -18,6 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.29.7",
     "@eslint/js": "^10.0.1",
+    "@module-federation/vite": "^1.23.5",
     "@rolldown/plugin-babel": "^0.2.4",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.19.2",

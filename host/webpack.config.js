@@ -48,7 +48,8 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'webpackHost',
       remotes: {
-        viteRemote: 'viteRemote@http://localhost:5001/mf-manifest.json'
+        viteRemote1: 'viteRemote1@http://localhost:5001/mf-manifest.json',
+        viteRemote2: 'viteRemote2@http://localhost:5002/mf-manifest.json'
       },
       shared: {
         react: {

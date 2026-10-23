@@ -5,6 +5,7 @@ import webpackLogo from './assets/webpack.svg'
 import './App.css'
 import ErrorBoundary from './ErrorBoundary';
 import ButtonRemote from './ButtonRemote';
+import MessageRemote from './MessageRemote';
 
 function App() {
 
@@ -35,6 +36,15 @@ function App() {
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
+        <ErrorBoundary
+          fallback={
+            <div>
+              <p>Unable to load remote component</p>
+            </div>
+          }
+        >
+          <MessageRemote />
+        </ErrorBoundary>
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more

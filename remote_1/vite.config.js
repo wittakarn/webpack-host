@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "viteRemote",
+      name: "viteRemote1",
       filename: "remoteEntry.js",
       exposes: {
         "./Button": "./src/components/Button",
@@ -16,10 +16,6 @@ export default defineConfig({
       dts: false,
       shared: {
         react: {
-          singleton: true,
-          eager: true,
-        },
-        "react-dom": {
           singleton: true,
           eager: true,
         },

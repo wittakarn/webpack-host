@@ -106,6 +106,12 @@ importers:
 
   remote_2:
     dependencies:
+      '@webpack-host/store':
+        specifier: workspace:*
+        version: link:../packages/store
+      jotai:
+        specifier: ^3.0.1
+        version: 3.0.1(@types/react@18.3.28)(react@18.3.1)
       react:
         specifier: ^18.2.0
         version: 18.3.1
@@ -122,6 +128,9 @@ importers:
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.13.0(jiti@2.4.2))
+      '@module-federation/vite':
+        specifier: ^1.23.5
+        version: 1.23.5(typescript@6.0.3)(vite@8.3.5(@types/node@24.19.2)(jiti@2.4.2)(terser@5.46.0))
       '@rolldown/plugin-babel':
         specifier: ^0.2.4
         version: 0.2.4(@babel/core@7.29.7)(rolldown@1.2.15)(vite@8.3.5(@types/node@24.19.2)(jiti@2.4.2)(terser@5.46.0))
@@ -4176,6 +4185,18 @@ snapshots:
       resolve: 1.22.8
 
   '@module-federation/third-party-dts-extractor@2.9.2': {}
+
+  '@module-federation/vite@1.23.5(typescript@6.0.3)(vite@8.3.5(@types/node@24.19.2)(jiti@2.4.2)(terser@5.46.0))':
+    dependencies:
+      '@module-federation/dts-plugin': 2.9.2(typescript@6.0.3)
+      '@module-federation/runtime': 2.9.2
+      '@module-federation/sdk': 2.9.2
+      vite: 8.3.5(@types/node@24.19.2)(jiti@2.4.2)(terser@5.46.0)
+    transitivePeerDependencies:
+      - bufferutil
+      - typescript
+      - utf-8-validate
+      - vue-tsc
 
   '@module-federation/vite@1.23.5(typescript@6.0.3)(vite@8.3.5(@types/node@25.3.1)(jiti@2.4.2)(terser@5.46.0))':
     dependencies:
