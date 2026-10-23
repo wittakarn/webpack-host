@@ -13,7 +13,8 @@
   "workspaces": [
     "host",
     "remote_1",
-    "remote_2"
+    "remote_2",
+    "packages/*"
   ],
   "devDependencies": {
     "kill-port": "^2.0.1"

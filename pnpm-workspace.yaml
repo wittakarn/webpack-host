@@ -2,5 +2,6 @@ packages:
   - 'host'
   - 'remote_1'
   - 'remote_2'
+  - 'packages/*'
 allowBuilds:
   esbuild: true

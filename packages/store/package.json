@@ -1,0 +1,10 @@
+{
+  "name": "@webpack-host/store",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "index.ts",
+  "peerDependencies": {
+    "jotai": "^3.0.1"
+  }
+}
